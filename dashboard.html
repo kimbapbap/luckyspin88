@@ -142,6 +142,13 @@ line-height:1.8;
 
 }
 
+.continue-btn{
+
+margin-top:25px;
+width:100%;
+
+}
+
 </style>
 
 </head>
@@ -278,7 +285,7 @@ SECURITY LOGS
 
 08:07  INFO      Backup completed
 
-08:11  WARNING   Multiple failed logins detected
+08:11  WARNING   Multiple failed login attempts detected
 
 08:15  INFO      Password reset completed
 
@@ -299,6 +306,14 @@ Analyst Note:
 Review warning events and verify
 whether additional investigation
 is required.
+
+<br><br>
+
+<button class="continue-btn" onclick="nextStep()">
+
+CONTINUE INVESTIGATION →
+
+</button>
 
 `;
 
@@ -337,6 +352,12 @@ Recommendations
 MISSION COMPLETE
 
 `;
+
+}
+
+function nextStep(){
+
+window.location.href="evidence.html";
 
 }
 
