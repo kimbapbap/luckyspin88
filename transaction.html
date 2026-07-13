@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LuckySpin88 - Termination Module</title>
+<title>LuckySpin88 - Transaction Review</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
@@ -28,7 +28,6 @@ body{
     align-items:flex-start;
 
     min-height:100vh;
-
     padding:20px;
 
     overflow-y:auto;
@@ -36,46 +35,101 @@ body{
 
 .panel{
     width:100%;
-    max-width:900px;
+    max-width:1000px;
 
-    margin:20px 0;
-
-    padding:40px;
+    padding:35px;
 
     border:2px solid #00ff88;
     background:#111;
-    box-shadow:0 0 25px #00ff88;
+    box-shadow:0 0 20px #00ff88;
 }
 
 h1{
     text-align:center;
-    margin-bottom:20px;
-    font-size:2rem;
+    margin-bottom:10px;
 }
 
 .subtitle{
     text-align:center;
     color:white;
     margin-bottom:30px;
-    line-height:1.6;
 }
 
-.status{
+.stats{
     line-height:2;
-    font-size:18px;
-    word-break:break-word;
 }
 
-.progress{
+.table-wrapper{
+    overflow-x:auto;
+    margin-top:25px;
+}
+
+table{
+    width:100%;
+    min-width:700px;
+    border-collapse:collapse;
+}
+
+th,td{
+    border:1px solid #00ff88;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#003d20;
+}
+
+.section{
     margin-top:30px;
-    font-size:20px;
-    line-height:1.8;
-    word-break:break-word;
+    line-height:2;
 }
 
-/* ===================== */
+button{
+    width:100%;
+    padding:15px;
+
+    margin-top:25px;
+
+    background:black;
+    color:#00ff88;
+
+    border:1px solid #00ff88;
+
+    font-size:16px;
+    font-family:'Share Tech Mono', monospace;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#00ff88;
+    color:black;
+}
+
+#terminal{
+    margin-top:15px;
+    white-space:pre-line;
+    line-height:1.8;
+}
+
+#terminal::after{
+    content:"█";
+    animation:blink .8s infinite;
+}
+
+#terminal.done::after{
+    display:none;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
+
 /* Tablet */
-/* ===================== */
 
 @media (max-width:768px){
 
@@ -85,30 +139,17 @@ h1{
 
     .panel{
         padding:25px;
-        margin:10px 0;
     }
 
-    h1{
-        font-size:1.7rem;
-    }
-
-    .subtitle{
+    .subtitle,
+    .stats,
+    .section{
         font-size:15px;
-    }
-
-    .status{
-        font-size:15px;
-    }
-
-    .progress{
-        font-size:16px;
     }
 
 }
 
-/* ===================== */
 /* Mobile */
-/* ===================== */
 
 @media (max-width:480px){
 
@@ -118,25 +159,24 @@ h1{
 
     .panel{
         padding:18px;
-        margin:0;
     }
 
     h1{
-        font-size:1.4rem;
+        font-size:22px;
     }
 
     .subtitle{
         font-size:14px;
     }
 
-    .status{
-        font-size:14px;
-        line-height:1.8;
+    th,td{
+        font-size:13px;
+        padding:8px;
     }
 
-    .progress{
+    .stats,
+    .section{
         font-size:14px;
-        line-height:1.7;
     }
 
 }
@@ -149,97 +189,205 @@ h1{
 
 <div class="panel">
 
-<h1>TERMINATION MODULE</h1>
+<h1>TRANSACTION REVIEW</h1>
 
 <div class="subtitle">
-Final Security Response Procedure
+Online Gambling Activity Assessment
 </div>
 
-<div class="status">
+<div class="stats">
 
-<b>TARGET</b>
-
-<br>
-
-LuckySpin88 Online Platform
+<b>Total Activity Records</b><br>
+1,248
 
 <br><br>
 
-<b>OPERATION CHECKLIST</b>
+<b>Records Analyzed</b><br>
+1,241
 
 <br><br>
 
-✓ Investigation Records Archived
+<b>Suspicious Records</b><br>
+7
 
-<br>
+<br><br>
 
-✓ Evidence Package Secured
-
-<br>
-
-✓ Activity Logs Preserved
-
-<br>
-
-✓ Platform Status Verified
-
-<br>
-
-✓ Termination Protocol Prepared
+<b>Risk Classification</b><br>
+HIGH
 
 </div>
 
-<div class="progress">
+<div class="table-wrapper">
 
-Executing final procedure...
+<table>
 
-<br><br>
+<tr>
+<th>Time</th>
+<th>Reference</th>
+<th>Activity Type</th>
+<th>Status</th>
+</tr>
 
-████████████████████ 100%
+<tr>
+<td>08:20</td>
+<td>ACT-10452</td>
+<td>Routine Platform Activity</td>
+<td>Verified</td>
+</tr>
 
-<br><br>
+<tr>
+<td>08:45</td>
+<td>ACT-10453</td>
+<td>Large Transaction Pattern</td>
+<td>Review</td>
+</tr>
 
-<b>TERMINATION RESULTS</b>
+<tr>
+<td>09:02</td>
+<td>ACT-10454</td>
+<td>Administrative Action</td>
+<td>Verified</td>
+</tr>
 
-<br><br>
+<tr>
+<td>09:14</td>
+<td>ACT-10455</td>
+<td>Manual Verification</td>
+<td>Pending</td>
+</tr>
 
-==================================
+<tr>
+<td>09:31</td>
+<td>ACT-10456</td>
+<td>Platform Activity</td>
+<td>Verified</td>
+</tr>
+
+<tr>
+<td>09:42</td>
+<td>ACT-10457</td>
+<td>High Risk Pattern</td>
+<td>Review</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>Correlation Results</h2>
 
 <br>
 
-✓ Platform activity disabled
+✓ Platform activity records correlated successfully.
 
 <br>
 
-✓ Access channels closed
+✓ Suspicious patterns matched with previous security events.
 
 <br>
 
-✓ Suspicious operations terminated
+✓ Transaction timeline reconstructed.
 
 <br>
 
-✓ System monitoring completed
+✓ Evidence package prepared for final assessment.
+
+</div>
+
+<div class="section">
+
+<h2>Analyst Recommendation</h2>
 
 <br>
 
-✓ Final incident record generated
+• Restrict suspicious platform activity.
 
 <br>
 
-==================================
-
-<br><br>
-
-<b>OPERATION STATUS:</b>
+• Preserve investigation records.
 
 <br>
 
-COMPLETE
+• Review affected system components.
+
+<br>
+
+• Prepare final incident response action.
+
+</div>
+
+<div class="section">
+
+<h2>INVESTIGATION STATUS</h2>
+
+<div id="terminal"></div>
+
+<button
+id="nextBtn"
+style="display:none;"
+onclick="window.location.href='terminate.html'">
+
+PROCEED TO TERMINATION MODULE →
+
+</button>
 
 </div>
 
 </div>
+
+<script>
+
+const lines=[
+
+"",
+
+"✔ Authentication Logs Reviewed",
+
+"✔ Evidence Analysis Completed",
+
+"✔ Database Review Completed",
+
+"✔ Transaction Review Completed",
+
+"",
+
+"The investigation has collected sufficient evidence",
+
+"to proceed with final platform action."
+
+];
+
+let index=0;
+
+function printLine(){
+
+    if(index<lines.length){
+
+        const terminal=document.getElementById("terminal");
+
+        terminal.innerHTML+=lines[index]+"<br>";
+
+        terminal.scrollTop=terminal.scrollHeight;
+
+        index++;
+
+        setTimeout(printLine,250);
+
+    }else{
+
+        document.getElementById("terminal").classList.add("done");
+
+        document.getElementById("nextBtn").style.display="block";
+
+    }
+
+}
+
+window.onload=printLine;
+
+</script>
 
 </body>
 
