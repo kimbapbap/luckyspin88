@@ -1,47 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuckySpin88 - Internal Access</title>
+function login() {
 
-    <link rel="stylesheet" href="style.css">
+    const password = document.getElementById("password").value;
+    const message = document.getElementById("message");
 
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-</head>
+    if (password === "notredame") {
 
-<body>
+        message.style.color = "#00ff88";
+        message.innerHTML = "ACCESS GRANTED";
 
-<div class="container">
+        setTimeout(function () {
 
-    <div class="terminal">
+            window.location.href = "dashboard.html";
 
-        <h1>LUCKYSPIN88</h1>
-        <h2>INTERNAL ADMIN ACCESS</h2>
+        }, 1000);
 
-        <div class="line"></div>
+    } else {
 
-        <p class="warning">
-            Authorized Personnel Only
-        </p>
+        message.style.color = "#ff4444";
+        message.innerHTML = "ACCESS DENIED";
 
-        <input
-            type="password"
-            id="password"
-            placeholder="Enter Password"
-            autocomplete="off">
+        document.getElementById("password").value = "";
 
-        <button onclick="login()">
-            LOGIN
-        </button>
+    }
 
-        <p id="message"></p>
+}
 
-    </div>
+// tekan Enter untuk login
+document.getElementById("password").addEventListener("keypress", function(event){
 
-</div>
+    if(event.key === "Enter"){
 
-<script src="script.js"></script>
+        login();
 
-</body>
-</html>
+    }
+
+});
