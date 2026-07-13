@@ -1,124 +1,170 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
+    background:#050505;
+    font-family:'Share Tech Mono', monospace;
+    color:#00ff88;
 
-background:#050505;
-font-family:'Share Tech Mono', monospace;
-color:#00ff88;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-display:flex;
-justify-content:center;
-align-items:center;
-
-height:100vh;
-
+    min-height:100vh;
+    padding:20px;
 }
 
 .container{
-
-display:flex;
-justify-content:center;
-align-items:center;
-
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .terminal{
+    width:100%;
+    max-width:500px;
 
-width:500px;
-padding:40px;
+    padding:40px;
 
-background:#111;
+    background:#111;
+    border:2px solid #00ff88;
+    box-shadow:0 0 20px #00ff88;
 
-border:2px solid #00ff88;
-
-box-shadow:0 0 20px #00ff88;
-
-text-align:center;
-
+    text-align:center;
 }
 
 h1{
-
-letter-spacing:3px;
-margin-bottom:10px;
-
+    letter-spacing:3px;
+    margin-bottom:10px;
+    font-size:2.3rem;
 }
 
 h2{
-
-font-size:18px;
-color:white;
-margin-bottom:20px;
-
+    font-size:18px;
+    color:white;
+    margin-bottom:20px;
 }
 
 .line{
-
-height:1px;
-background:#00ff88;
-margin-bottom:20px;
-
+    height:1px;
+    background:#00ff88;
+    margin-bottom:20px;
 }
 
 .warning{
-
-margin-bottom:20px;
-color:#00ff88;
-
+    margin-bottom:20px;
+    color:#00ff88;
+    line-height:1.6;
 }
 
 input{
+    width:100%;
+    padding:15px;
 
-width:100%;
-padding:15px;
+    background:black;
+    color:#00ff88;
 
-background:black;
-color:#00ff88;
+    border:1px solid #00ff88;
 
-border:1px solid #00ff88;
+    font-size:16px;
 
-font-size:16px;
+    margin-bottom:20px;
 
-margin-bottom:20px;
-
+    font-family:'Share Tech Mono', monospace;
 }
 
 button{
+    width:100%;
 
-width:100%;
+    padding:15px;
 
-padding:15px;
+    background:black;
+    color:#00ff88;
 
-background:black;
+    border:1px solid #00ff88;
 
-color:#00ff88;
+    cursor:pointer;
 
-border:1px solid #00ff88;
+    font-size:16px;
 
-cursor:pointer;
+    transition:.3s;
 
-font-size:16px;
-
-transition:.3s;
-
+    font-family:'Share Tech Mono', monospace;
 }
 
 button:hover{
-
-background:#00ff88;
-
-color:black;
-
+    background:#00ff88;
+    color:black;
 }
 
 #message{
+    margin-top:20px;
+    font-weight:bold;
+    line-height:1.6;
+}
 
-margin-top:20px;
+/* ========================= */
+/* Mobile & Tablet Responsive */
+/* ========================= */
 
-font-weight:bold;
+@media (max-width:768px){
+
+    body{
+        padding:16px;
+    }
+
+    .terminal{
+        max-width:100%;
+        padding:25px;
+    }
+
+    h1{
+        font-size:1.8rem;
+        letter-spacing:2px;
+    }
+
+    h2{
+        font-size:1rem;
+    }
+
+    .warning{
+        font-size:0.9rem;
+    }
+
+    input,
+    button{
+        font-size:15px;
+        padding:14px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .terminal{
+        padding:20px;
+    }
+
+    h1{
+        font-size:1.5rem;
+    }
+
+    h2{
+        font-size:0.9rem;
+    }
+
+    .warning{
+        font-size:0.85rem;
+    }
+
+    input,
+    button{
+        font-size:14px;
+        padding:12px;
+    }
 
 }
