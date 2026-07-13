@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#050505;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:100vh;
+
+    font-family:'Share Tech Mono', monospace;
+
+    color:#00ff88;
+
+}
+
+.container{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+
+}
+
+.terminal{
+
+    width:420px;
+
+    background:#111;
+
+    border:2px solid #00ff88;
+
+    padding:40px;
+
+    box-shadow:0 0 30px #00ff88;
+
+    text-align:center;
+
+}
+
+h1{
+
+    font-size:40px;
+    margin-bottom:10px;
+    letter-spacing:3px;
+
+}
+
+h2{
+
+    color:white;
+
+    font-size:18px;
+
+    margin-bottom:30px;
+
+}
+
+.line{
+
+    height:1px;
+
+    background:#00ff88;
+
+    margin-bottom:25px;
+
+}
+
+.warning{
+
+    color:#00ff88;
+
+    margin-bottom:25px;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:15px;
+
+    background:black;
+
+    border:1px solid #00ff88;
+
+    color:#00ff88;
+
+    font-size:18px;
+
+    outline:none;
+
+    margin-bottom:20px;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#00ff88;
+
+    border:none;
+
+    color:black;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:white;
+
+}
+
+#message{
+
+    margin-top:20px;
+
+    height:25px;
+
+    font-size:18px;
+
+}
