@@ -1,139 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuckySpin88 - Security Console</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
+<title>LuckySpin88 - Internal Security Console</title>
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-        body{
+<style>
 
-            background:#050505;
-            color:#00ff88;
-            font-family:'Share Tech Mono', monospace;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-            display:flex;
-            justify-content:center;
-            align-items:center;
+body{
 
-            height:100vh;
+background:#050505;
+font-family:'Share Tech Mono', monospace;
+color:#00ff88;
 
-        }
+display:flex;
+justify-content:center;
+align-items:center;
 
-        .panel{
+height:100vh;
 
-            width:900px;
+}
 
-            border:2px solid #00ff88;
+.panel{
 
-            padding:35px;
+width:950px;
 
-            box-shadow:0 0 25px #00ff88;
+background:#111;
 
-            background:#101010;
+border:2px solid #00ff88;
 
-        }
+padding:35px;
 
-        h1{
+box-shadow:0 0 30px #00ff88;
 
-            text-align:center;
-            letter-spacing:3px;
+}
 
-            margin-bottom:10px;
+h1{
 
-        }
+text-align:center;
+letter-spacing:3px;
 
-        h2{
+}
 
-            text-align:center;
+h2{
 
-            color:white;
+text-align:center;
 
-            font-size:18px;
+margin-top:10px;
 
-            margin-bottom:30px;
+color:white;
 
-        }
+margin-bottom:30px;
 
-        .status{
+font-size:18px;
 
-            display:grid;
+}
 
-            grid-template-columns:1fr 1fr;
+.status{
 
-            gap:15px;
+display:grid;
 
-            margin-bottom:30px;
+grid-template-columns:1fr 1fr;
 
-        }
+gap:15px;
 
-        .box{
+margin-bottom:25px;
 
-            border:1px solid #00ff88;
+}
 
-            padding:15px;
+.box{
 
-        }
+border:1px solid #00ff88;
 
-        .menu{
+padding:15px;
 
-            display:grid;
+}
 
-            grid-template-columns:repeat(2,1fr);
+.menu{
 
-            gap:15px;
+display:grid;
 
-        }
+grid-template-columns:repeat(2,1fr);
 
-        button{
+gap:15px;
 
-            background:black;
+margin-bottom:25px;
 
-            color:#00ff88;
+}
 
-            border:1px solid #00ff88;
+button{
 
-            padding:18px;
+padding:18px;
 
-            cursor:pointer;
+background:black;
 
-            font-size:17px;
+border:1px solid #00ff88;
 
-            transition:.3s;
+color:#00ff88;
 
-        }
+font-size:17px;
 
-        button:hover{
+cursor:pointer;
 
-            background:#00ff88;
-            color:black;
+transition:.3s;
 
-        }
+}
 
-        #output{
+button:hover{
 
-            margin-top:30px;
+background:#00ff88;
 
-            border:1px solid #00ff88;
+color:black;
 
-            padding:20px;
+}
 
-            min-height:160px;
+#terminal{
 
-            white-space:pre-line;
+border:1px solid #00ff88;
 
-        }
+padding:20px;
 
-    </style>
+background:black;
+
+height:330px;
+
+overflow:auto;
+
+white-space:pre-line;
+
+line-height:1.8;
+
+}
+
+</style>
 
 </head>
 
@@ -176,7 +185,7 @@ Security Audit
 </button>
 
 <button onclick="logs()">
-View Logs
+Security Logs
 </button>
 
 <button onclick="report()">
@@ -185,11 +194,13 @@ Incident Report
 
 </div>
 
-<div id="output">
+<div id="terminal">
 
-Welcome.
+WELCOME.
 
-Select a module to begin the security assessment.
+Authentication successful.
+
+Select one of the modules above to continue.
 
 </div>
 
@@ -199,64 +210,132 @@ Select a module to begin the security assessment.
 
 function overview(){
 
-document.getElementById("output").innerHTML=`
-Loading system inventory...
+document.getElementById("terminal").innerHTML=`
 
-✓ Web Frontend
-✓ Authentication Service
-✓ Database Cluster
-✓ Backup Server
+SYSTEM OVERVIEW
 
-Status:
-System operational.
+==================================
+
+Frontend Server        ONLINE
+
+Authentication         ONLINE
+
+Database Cluster       ONLINE
+
+Firewall               ACTIVE
+
+Backup Server          ONLINE
+
+Storage Usage          67%
+
+CPU Usage              23%
+
+Memory Usage           41%
+
+Network Status         STABLE
+
 `;
 
 }
 
 function audit(){
 
-document.getElementById("output").innerHTML=`
-Running security audit...
+document.getElementById("terminal").innerHTML=`
 
-✓ TLS enabled
-✓ Multi-factor authentication enabled
-⚠ Password policy requires review
-⚠ Software updates pending
+SECURITY AUDIT
 
-Audit complete.
+==================================
+
+✓ TLS Certificate Valid
+
+✓ Firewall Enabled
+
+✓ Multi-Factor Authentication Active
+
+✓ Backup Schedule Verified
+
+⚠ Password Policy Requires Review
+
+⚠ Software Updates Pending
+
+Assessment Complete.
+
 `;
 
 }
 
 function logs(){
 
-document.getElementById("output").innerHTML=`
-Recent events
+document.getElementById("terminal").innerHTML=`
 
-[08:21] User login successful
-[08:32] Password reset requested
-[08:40] Admin settings updated
-[08:56] Backup completed
+SECURITY LOGS
 
-No critical alerts detected.
+==================================
+
+08:00  INFO      Web service started
+
+08:03  INFO      Administrator login
+
+08:07  INFO      Backup completed
+
+08:11  WARNING   Multiple failed logins detected
+
+08:15  INFO      Password reset completed
+
+08:18  INFO      Configuration updated
+
+08:22  WARNING   Login outside normal business hours
+
+08:26  INFO      Audit log exported
+
+08:31  WARNING   Large file download recorded
+
+08:36  INFO      Session closed
+
+==================================
+
+Analyst Note:
+
+Review warning events and verify
+whether additional investigation
+is required.
+
 `;
 
 }
 
 function report(){
 
-document.getElementById("output").innerHTML=`
-SECURITY SUMMARY
+document.getElementById("terminal").innerHTML=`
 
-Risk Level : LOW
+INCIDENT REPORT
+
+==================================
+
+Risk Level
+
+LOW
+
+Findings
+
+• Multiple failed login attempts
+
+• Login outside normal hours
+
+• Large download should be reviewed
 
 Recommendations
 
-• Update server software
-• Strengthen password policy
+• Update password policy
+
+• Install pending updates
+
 • Review administrator permissions
 
-Assessment complete.
+• Continue monitoring
+
+MISSION COMPLETE
+
 `;
 
 }
