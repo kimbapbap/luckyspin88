@@ -13,98 +13,179 @@
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#050505;
-color:#00ff88;
-font-family:'Share Tech Mono',monospace;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-padding:30px;
+    background:#050505;
+    color:#00ff88;
+    font-family:'Share Tech Mono', monospace;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+    padding:20px;
 }
 
 .panel{
-width:1000px;
-padding:35px;
-border:2px solid #00ff88;
-background:#111;
-box-shadow:0 0 20px #00ff88;
+    width:100%;
+    max-width:1000px;
+
+    padding:35px;
+
+    border:2px solid #00ff88;
+    background:#111;
+    box-shadow:0 0 20px #00ff88;
 }
 
 h1{
-text-align:center;
-margin-bottom:10px;
+    text-align:center;
+    margin-bottom:10px;
 }
 
 .subtitle{
-text-align:center;
-color:white;
-margin-bottom:30px;
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
 }
 
 .stats{
-line-height:2;
-margin-bottom:25px;
+    line-height:2;
+    margin-bottom:25px;
+}
+
+.table-wrapper{
+    overflow-x:auto;
+    margin-top:20px;
 }
 
 table{
-
-width:100%;
-border-collapse:collapse;
-margin-top:20px;
-
+    width:100%;
+    min-width:700px;
+    border-collapse:collapse;
 }
 
-th,td{
-
-border:1px solid #00ff88;
-padding:10px;
-text-align:center;
-
+th,
+td{
+    border:1px solid #00ff88;
+    padding:10px;
+    text-align:center;
 }
 
 th{
-
-background:#003d20;
-
+    background:#003d20;
 }
 
 .section{
-
-margin-top:30px;
-line-height:2;
-
+    margin-top:30px;
+    line-height:2;
 }
 
 button{
+    padding:15px 35px;
+    margin-top:25px;
 
-padding:15px 35px;
-margin-top:25px;
-background:black;
-color:#00ff88;
-border:1px solid #00ff88;
-font-size:16px;
-cursor:pointer;
+    background:black;
+    color:#00ff88;
 
+    border:1px solid #00ff88;
+
+    font-size:16px;
+    font-family:'Share Tech Mono', monospace;
+
+    cursor:pointer;
+    transition:.3s;
 }
 
 button:hover{
+    background:#00ff88;
+    color:black;
+}
 
-background:#00ff88;
-color:black;
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media (max-width:768px){
+
+    body{
+        padding:15px;
+        align-items:flex-start;
+    }
+
+    .panel{
+        padding:25px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    h2{
+        font-size:20px;
+    }
+
+    .subtitle,
+    .stats,
+    .section{
+        font-size:15px;
+    }
+
+    button{
+        width:100%;
+    }
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media (max-width:480px){
+
+    body{
+        padding:10px;
+    }
+
+    .panel{
+        padding:18px;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    h2{
+        font-size:18px;
+    }
+
+    .subtitle,
+    .stats,
+    .section{
+        font-size:14px;
+    }
+
+    th,
+    td{
+        padding:8px;
+        font-size:13px;
+    }
+
+    button{
+        width:100%;
+        font-size:14px;
+        padding:12px;
+    }
 
 }
 
 </style>
 
 </head>
-
 
 <body>
 
@@ -115,7 +196,6 @@ color:black;
 <div class="subtitle">
 Online Gambling Platform Intelligence Dashboard
 </div>
-
 
 <div class="stats">
 
@@ -139,19 +219,17 @@ Online Gambling Platform Intelligence Dashboard
 
 </div>
 
+<div class="table-wrapper">
 
 <table>
 
 <tr>
-
 <th>ID</th>
 <th>Username</th>
 <th>Account Type</th>
 <th>Last Activity</th>
 <th>Status</th>
-
 </tr>
-
 
 <tr>
 <td>1001</td>
@@ -161,7 +239,6 @@ Online Gambling Platform Intelligence Dashboard
 <td>Active</td>
 </tr>
 
-
 <tr>
 <td>1002</td>
 <td>player_support</td>
@@ -169,7 +246,6 @@ Online Gambling Platform Intelligence Dashboard
 <td>08:44</td>
 <td>Active</td>
 </tr>
-
 
 <tr>
 <td>1003</td>
@@ -179,7 +255,6 @@ Online Gambling Platform Intelligence Dashboard
 <td>Review</td>
 </tr>
 
-
 <tr>
 <td>1004</td>
 <td>system_ops</td>
@@ -187,7 +262,6 @@ Online Gambling Platform Intelligence Dashboard
 <td>09:31</td>
 <td>Active</td>
 </tr>
-
 
 <tr>
 <td>1005</td>
@@ -197,7 +271,6 @@ Online Gambling Platform Intelligence Dashboard
 <td>Active</td>
 </tr>
 
-
 <tr>
 <td>1006</td>
 <td>service_core</td>
@@ -206,69 +279,36 @@ Online Gambling Platform Intelligence Dashboard
 <td>Running</td>
 </tr>
 
-
 </table>
 
-
+</div>
 
 <div class="section">
 
 <h2>Selected Record</h2>
 
-<br>
-
-User ID: 1003
-
-<br>
-
-Account Type: Transaction Manager
-
-<br>
-
-Verification Status: Enabled
-
-<br>
-
-Account Status: Under Review
-
-<br>
-
+User ID: 1003<br>
+Account Type: Transaction Manager<br>
+Verification Status: Enabled<br>
+Account Status: Under Review<br>
 Last Activity Check: 21 Days Ago
 
-
 </div>
-
-
 
 <div class="section">
 
 <h2>Audit Notes</h2>
 
-<br>
-
-• Suspicious platform activity identified.
-
-<br>
-
-• Transaction records require additional review.
-
-<br>
-
-• Administrative access history analyzed.
-
-<br>
-
+• Suspicious platform activity identified.<br>
+• Transaction records require additional review.<br>
+• Administrative access history analyzed.<br>
 • Continuous monitoring recommended.
 
 </div>
 
-
-
 <div class="section">
 
 <h2>DATABASE REVIEW COMPLETE</h2>
-
-<br>
 
 Platform records, account activity, and operational data have been successfully analyzed.
 
@@ -279,17 +319,12 @@ Selected records have been correlated with previous activity logs and prepared f
 <br><br>
 
 <button onclick="window.location.href='transaction.html'">
-
 PROCEED TO TRANSACTION REVIEW →
-
 </button>
 
-
 </div>
-
 
 </div>
 
 </body>
-
 </html>
