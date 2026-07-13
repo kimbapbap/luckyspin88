@@ -155,25 +155,6 @@ button:hover{
         line-height:1.7;
     }
 
-    #terminal{
-    white-space:pre-line;
-}
-
-#terminal::after{
-    content:"█";
-    animation:blink .8s infinite;
-}
-
-#terminal.done::after{
-    display:none;
-}
-
-@keyframes blink{
-    50%{
-        opacity:0;
-    }
-}
-
     button{
         font-size:14px;
         padding:12px;
@@ -229,8 +210,8 @@ LuckySpin88 Online Platform
 
 </div>
 
-<div class="progress" id="terminal"></div>
-    
+<div class="progress">
+
 Executing final procedure...
 
 <br><br>
@@ -281,34 +262,6 @@ COMPLETE
 
 </div>
 
-let index = 0;
-
-function printLine(){
-
-    if(index < lines.length){
-
-        const terminal = document.getElementById("terminal");
-
-        terminal.innerHTML += lines[index] + "<br>";
-
-        terminal.scrollTop = terminal.scrollHeight;
-
-        index++;
-
-        setTimeout(printLine, 250);
-
-    }else{
-
-        document.getElementById("terminal").classList.add("done");
-
-    }
-
-}
-
-window.onload = printLine;
-
-</script>
-
 </body>
 
-</html>
+</html> 
