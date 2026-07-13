@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Database Review</title>
+<title>LuckySpin88 - Database Review</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
@@ -22,7 +22,7 @@ body{
 
 background:#050505;
 color:#00ff88;
-font-family:'Share Tech Mono',monospace;
+font-family:'Share Tech Mono', monospace;
 
 padding:40px;
 
@@ -73,7 +73,7 @@ border:1px solid #00ff88;
 
 padding:20px;
 
-background:#101010;
+background:#111;
 
 }
 
@@ -137,6 +137,8 @@ grid-template-columns:1fr 1fr;
 
 gap:25px;
 
+margin-bottom:30px;
+
 }
 
 .box{
@@ -147,19 +149,49 @@ padding:20px;
 
 background:#111;
 
+line-height:1.8;
+
 }
 
 .box h3{
 
-margin-bottom:20px;
+margin-bottom:15px;
 
 color:white;
 
 }
 
-button{
+.summary{
 
-margin-top:30px;
+margin-top:20px;
+
+padding:25px;
+
+background:#111;
+
+border:1px solid #00ff88;
+
+line-height:2;
+
+}
+
+.summary h2{
+
+margin-bottom:15px;
+
+color:white;
+
+}
+
+.footer{
+
+text-align:center;
+
+margin-top:35px;
+
+}
+
+button{
 
 padding:15px 40px;
 
@@ -169,9 +201,11 @@ color:#00ff88;
 
 border:1px solid #00ff88;
 
+font-size:17px;
+
 cursor:pointer;
 
-font-size:16px;
+transition:.3s;
 
 }
 
@@ -244,13 +278,9 @@ Internal Security Audit Dashboard
 <tr>
 
 <th>ID</th>
-
 <th>Username</th>
-
 <th>Role</th>
-
 <th>Last Login</th>
-
 <th>Status</th>
 
 </tr>
@@ -258,13 +288,9 @@ Internal Security Audit Dashboard
 <tr>
 
 <td>1001</td>
-
 <td>admin01</td>
-
 <td>Administrator</td>
-
 <td>08:21</td>
-
 <td>Active</td>
 
 </tr>
@@ -272,13 +298,9 @@ Internal Security Audit Dashboard
 <tr>
 
 <td>1002</td>
-
 <td>support07</td>
-
 <td>Support</td>
-
 <td>08:44</td>
-
 <td>Active</td>
 
 </tr>
@@ -286,13 +308,9 @@ Internal Security Audit Dashboard
 <tr>
 
 <td>1003</td>
-
 <td>finance02</td>
-
 <td>Finance</td>
-
 <td>09:12</td>
-
 <td>Review</td>
 
 </tr>
@@ -300,13 +318,9 @@ Internal Security Audit Dashboard
 <tr>
 
 <td>1004</td>
-
 <td>ops14</td>
-
 <td>Operations</td>
-
 <td>09:31</td>
-
 <td>Active</td>
 
 </tr>
@@ -314,13 +328,9 @@ Internal Security Audit Dashboard
 <tr>
 
 <td>1005</td>
-
 <td>audit01</td>
-
 <td>Auditor</td>
-
 <td>09:45</td>
-
 <td>Active</td>
 
 </tr>
@@ -328,13 +338,9 @@ Internal Security Audit Dashboard
 <tr>
 
 <td>1006</td>
-
 <td>service01</td>
-
 <td>Service</td>
-
 <td>System</td>
-
 <td>Running</td>
 
 </tr>
@@ -347,15 +353,15 @@ Internal Security Audit Dashboard
 
 <h3>Selected Record</h3>
 
-<p>User ID : 1003</p>
+<p><strong>User ID:</strong> 1003</p>
 
-<p>Role : Finance</p>
+<p><strong>Role:</strong> Finance</p>
 
-<p>MFA : Enabled</p>
+<p><strong>MFA:</strong> Enabled</p>
 
-<p>Account Status : Review</p>
+<p><strong>Account Status:</strong> Review</p>
 
-<p>Last Password Change : 21 Days Ago</p>
+<p><strong>Last Password Change:</strong> 21 Days Ago</p>
 
 </div>
 
@@ -375,11 +381,41 @@ Internal Security Audit Dashboard
 
 </div>
 
-<button onclick="location.href='transactions.html'">
+<div class="summary">
 
-CONTINUE
+<h2>DATABASE REVIEW COMPLETE</h2>
+
+<p>
+
+The user records, authentication history, and account status have been
+successfully reviewed.
+
+</p>
+
+<p>
+
+The selected records have been correlated with previous authentication
+events and are ready for financial transaction analysis.
+
+</p>
+
+<p>
+
+Proceed to the <strong>Transaction Review</strong> module to continue the investigation.
+
+</p>
+
+</div>
+
+<div class="footer">
+
+<button onclick="window.location.href='transactions.html'">
+
+CONTINUE TO TRANSACTION REVIEW →
 
 </button>
+
+</div>
 
 </div>
 
