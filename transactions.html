@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Transaction Review</title>
+<title>LuckySpin88 - Transaction Review</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
@@ -22,15 +22,14 @@ body{
 
 background:#050505;
 color:#00ff88;
-font-family:'Share Tech Mono',monospace;
-
+font-family:'Share Tech Mono', monospace;
 padding:40px;
 
 }
 
 .container{
 
-max-width:1300px;
+max-width:1250px;
 margin:auto;
 
 }
@@ -44,12 +43,11 @@ margin-bottom:30px;
 .header h1{
 
 font-size:42px;
-
-margin-bottom:8px;
+margin-bottom:10px;
 
 }
 
-.header p{
+.subtitle{
 
 color:white;
 
@@ -58,47 +56,38 @@ color:white;
 .cards{
 
 display:grid;
-
 grid-template-columns:repeat(4,1fr);
-
 gap:20px;
-
 margin-bottom:30px;
 
 }
 
 .card{
 
-border:1px solid #00ff88;
-
-padding:20px;
-
 background:#111;
+border:1px solid #00ff88;
+padding:20px;
 
 }
 
 .card h3{
 
-font-size:15px;
-
-margin-bottom:10px;
-
 color:white;
+margin-bottom:10px;
+font-size:15px;
 
 }
 
 .card p{
 
-font-size:30px;
+font-size:28px;
 
 }
 
 table{
 
 width:100%;
-
 border-collapse:collapse;
-
 margin-bottom:30px;
 
 }
@@ -106,9 +95,7 @@ margin-bottom:30px;
 th{
 
 background:#00ff88;
-
 color:black;
-
 padding:14px;
 
 }
@@ -116,71 +103,80 @@ padding:14px;
 td{
 
 border:1px solid #00ff88;
-
 padding:12px;
-
 text-align:center;
 
 }
 
 tr:hover{
 
-background:#1b1b1b;
+background:#1a1a1a;
 
 }
 
 .analysis{
 
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:25px;
-
 margin-bottom:30px;
 
 }
 
 .box{
 
-border:1px solid #00ff88;
-
-padding:20px;
-
 background:#111;
-
+border:1px solid #00ff88;
+padding:20px;
 line-height:1.8;
 
 }
 
 .box h2{
 
+color:white;
 margin-bottom:15px;
 
+}
+
+.timeline{
+
+background:#111;
+border:1px solid #00ff88;
+padding:20px;
+margin-bottom:30px;
+line-height:2;
+
+}
+
+.timeline h2{
+
 color:white;
+margin-bottom:15px;
+
+}
+
+.footer{
+
+text-align:center;
 
 }
 
 button{
 
-padding:15px 35px;
-
+padding:15px 40px;
 background:black;
-
 color:#00ff88;
-
 border:1px solid #00ff88;
-
-cursor:pointer;
-
 font-size:17px;
+cursor:pointer;
+transition:.3s;
 
 }
 
 button:hover{
 
 background:#00ff88;
-
 color:black;
 
 }
@@ -197,7 +193,11 @@ color:black;
 
 <h1>TRANSACTION REVIEW</h1>
 
-<p>Internal Security Audit</p>
+<p class="subtitle">
+
+Internal Financial Activity Assessment
+
+</p>
 
 </div>
 
@@ -213,15 +213,7 @@ color:black;
 
 <div class="card">
 
-<h3>Flagged For Review</h3>
-
-<p>7</p>
-
-</div>
-
-<div class="card">
-
-<h3>Completed</h3>
+<h3>Reviewed</h3>
 
 <p>1,241</p>
 
@@ -229,9 +221,17 @@ color:black;
 
 <div class="card">
 
-<h3>Risk Score</h3>
+<h3>Flagged</h3>
 
-<p>72%</p>
+<p>7</p>
+
+</div>
+
+<div class="card">
+
+<h3>Risk Level</h3>
+
+<p>LOW</p>
 
 </div>
 
@@ -242,11 +242,8 @@ color:black;
 <tr>
 
 <th>Time</th>
-
 <th>Reference</th>
-
 <th>Category</th>
-
 <th>Status</th>
 
 </tr>
@@ -254,23 +251,17 @@ color:black;
 <tr>
 
 <td>08:20</td>
-
 <td>TRX-10452</td>
-
-<td>Standard Activity</td>
-
-<td>Completed</td>
+<td>Routine Activity</td>
+<td>Verified</td>
 
 </tr>
 
 <tr>
 
 <td>08:45</td>
-
 <td>TRX-10453</td>
-
 <td>High Value</td>
-
 <td>Review</td>
 
 </tr>
@@ -278,23 +269,17 @@ color:black;
 <tr>
 
 <td>09:02</td>
-
 <td>TRX-10454</td>
-
 <td>Administrative Approval</td>
-
-<td>Completed</td>
+<td>Verified</td>
 
 </tr>
 
 <tr>
 
 <td>09:14</td>
-
 <td>TRX-10455</td>
-
 <td>Manual Verification</td>
-
 <td>Pending</td>
 
 </tr>
@@ -302,23 +287,17 @@ color:black;
 <tr>
 
 <td>09:31</td>
-
 <td>TRX-10456</td>
-
-<td>Scheduled Process</td>
-
-<td>Completed</td>
+<td>Routine Activity</td>
+<td>Verified</td>
 
 </tr>
 
 <tr>
 
 <td>09:42</td>
-
 <td>TRX-10457</td>
-
 <td>High Value</td>
-
 <td>Review</td>
 
 </tr>
@@ -329,17 +308,15 @@ color:black;
 
 <div class="box">
 
-<h2>Analyst Summary</h2>
+<h2>Correlation Results</h2>
 
 <p>
 
-• Review high-value records against approval logs.<br>
+✓ Transaction records successfully matched with authentication logs.<br><br>
 
-• Confirm that pending verification is completed.<br>
+✓ Review items correspond to previously identified audit events.<br><br>
 
-• Correlate flagged events with authentication logs.<br>
-
-• No confirmed compromise identified from transaction data alone.
+✓ No inconsistencies detected in the reviewed records.
 
 </p>
 
@@ -347,17 +324,17 @@ color:black;
 
 <div class="box">
 
-<h2>Recommended Actions</h2>
+<h2>Analyst Recommendation</h2>
 
 <p>
 
-✓ Continue monitoring.<br>
+• Complete manual verification for pending items.<br>
 
-✓ Validate approval workflow.<br>
+• Maintain routine monitoring.<br>
 
-✓ Verify audit trail completeness.<br>
+• Archive reviewed records.<br>
 
-✓ Escalate only if additional evidence is found.
+• Submit investigation findings for final reporting.
 
 </p>
 
@@ -365,11 +342,35 @@ color:black;
 
 </div>
 
-<button onclick="location.href='report.html'">
+<div class="timeline">
 
-GENERATE INCIDENT REPORT
+<h2>INVESTIGATION STATUS</h2>
+
+<p>
+
+✔ Authentication Logs Reviewed<br>
+
+✔ Evidence Analysis Completed<br>
+
+✔ Database Review Completed<br>
+
+✔ Transaction Review Completed<br><br>
+
+The investigation has gathered sufficient information to prepare the final report.
+
+</p>
+
+</div>
+
+<div class="footer">
+
+<button onclick="window.location.href='report.html'">
+
+GENERATE FINAL REPORT →
 
 </button>
+
+</div>
 
 </div>
 
