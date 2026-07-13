@@ -1,29 +1,36 @@
-function login(){
+function login() {
 
     const password = document.getElementById("password").value;
-
     const message = document.getElementById("message");
 
-    if(password === "notredame"){
+    if (password === "notredame") {
 
-        message.style.color="#00ff88";
+        message.style.color = "#00ff88";
+        message.innerHTML = "ACCESS GRANTED";
 
-        message.innerHTML="ACCESS GRANTED";
+        setTimeout(function () {
 
-        setTimeout(()=>{
+            window.location.href = "dashboard.html";
 
-            window.location.href="dashboard.html";
+        }, 1000);
 
-        },1200);
+    } else {
 
-    }
+        message.style.color = "#ff4444";
+        message.innerHTML = "ACCESS DENIED";
 
-    else{
-
-        message.style.color="#ff4040";
-
-        message.innerHTML="ACCESS DENIED";
+        document.getElementById("password").value = "";
 
     }
 
 }
+
+document.getElementById("password").addEventListener("keypress", function(event){
+
+    if(event.key === "Enter"){
+
+        login();
+
+    }
+
+});
