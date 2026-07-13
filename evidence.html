@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LuckySpin88 - Evidence Analysis</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+background:#050505;
+color:#00ff88;
+font-family:'Share Tech Mono',monospace;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.panel{
+width:900px;
+padding:30px;
+border:2px solid #00ff88;
+background:#111;
+box-shadow:0 0 20px #00ff88;
+}
+
+button{
+
+padding:15px 30px;
+
+margin-top:20px;
+
+background:black;
+
+color:#00ff88;
+
+border:1px solid #00ff88;
+
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#00ff88;
+color:black;
+
+}
+
+#result{
+
+margin-top:30px;
+
+line-height:1.8;
+
+white-space:pre-line;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="panel">
+
+<h1>DIGITAL EVIDENCE</h1>
+
+<p>Select evidence for automated review.</p>
+
+<ul>
+
+<li>✓ Authentication Log</li>
+
+<li>✓ Database Snapshot</li>
+
+<li>✓ Transaction Summary</li>
+
+<li>✓ Audit Trail</li>
+
+</ul>
+
+<button onclick="analyse()">
+ANALYZE
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function analyse(){
+
+document.getElementById("result").innerHTML=`
+
+Analyzing...
+
+██████████████ 100%
+
+Finding 01
+Repeated failed logins
+
+Finding 02
+Password policy requires review
+
+Finding 03
+Configuration changes require verification
+
+<button onclick="location.href='database.html'">CONTINUE</button>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
