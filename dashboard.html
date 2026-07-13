@@ -1,9 +1,267 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuckySpin88 - Security Console</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+
+            background:#050505;
+            color:#00ff88;
+            font-family:'Share Tech Mono', monospace;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            height:100vh;
+
+        }
+
+        .panel{
+
+            width:900px;
+
+            border:2px solid #00ff88;
+
+            padding:35px;
+
+            box-shadow:0 0 25px #00ff88;
+
+            background:#101010;
+
+        }
+
+        h1{
+
+            text-align:center;
+            letter-spacing:3px;
+
+            margin-bottom:10px;
+
+        }
+
+        h2{
+
+            text-align:center;
+
+            color:white;
+
+            font-size:18px;
+
+            margin-bottom:30px;
+
+        }
+
+        .status{
+
+            display:grid;
+
+            grid-template-columns:1fr 1fr;
+
+            gap:15px;
+
+            margin-bottom:30px;
+
+        }
+
+        .box{
+
+            border:1px solid #00ff88;
+
+            padding:15px;
+
+        }
+
+        .menu{
+
+            display:grid;
+
+            grid-template-columns:repeat(2,1fr);
+
+            gap:15px;
+
+        }
+
+        button{
+
+            background:black;
+
+            color:#00ff88;
+
+            border:1px solid #00ff88;
+
+            padding:18px;
+
+            cursor:pointer;
+
+            font-size:17px;
+
+            transition:.3s;
+
+        }
+
+        button:hover{
+
+            background:#00ff88;
+            color:black;
+
+        }
+
+        #output{
+
+            margin-top:30px;
+
+            border:1px solid #00ff88;
+
+            padding:20px;
+
+            min-height:160px;
+
+            white-space:pre-line;
+
+        }
+
+    </style>
+
 </head>
-<body style="background:black;color:#00ff88;font-family:monospace;">
-    <h1>Mission Started</h1>
+
+<body>
+
+<div class="panel">
+
+<h1>LUCKYSPIN88</h1>
+
+<h2>INTERNAL SECURITY CONSOLE</h2>
+
+<div class="status">
+
+<div class="box">
+Operator : Guest
+</div>
+
+<div class="box">
+Access Level : LEVEL 1
+</div>
+
+<div class="box">
+Environment : Training
+</div>
+
+<div class="box">
+Status : CONNECTED
+</div>
+
+</div>
+
+<div class="menu">
+
+<button onclick="overview()">
+System Overview
+</button>
+
+<button onclick="audit()">
+Security Audit
+</button>
+
+<button onclick="logs()">
+View Logs
+</button>
+
+<button onclick="report()">
+Incident Report
+</button>
+
+</div>
+
+<div id="output">
+
+Welcome.
+
+Select a module to begin the security assessment.
+
+</div>
+
+</div>
+
+<script>
+
+function overview(){
+
+document.getElementById("output").innerHTML=`
+Loading system inventory...
+
+✓ Web Frontend
+✓ Authentication Service
+✓ Database Cluster
+✓ Backup Server
+
+Status:
+System operational.
+`;
+
+}
+
+function audit(){
+
+document.getElementById("output").innerHTML=`
+Running security audit...
+
+✓ TLS enabled
+✓ Multi-factor authentication enabled
+⚠ Password policy requires review
+⚠ Software updates pending
+
+Audit complete.
+`;
+
+}
+
+function logs(){
+
+document.getElementById("output").innerHTML=`
+Recent events
+
+[08:21] User login successful
+[08:32] Password reset requested
+[08:40] Admin settings updated
+[08:56] Backup completed
+
+No critical alerts detected.
+`;
+
+}
+
+function report(){
+
+document.getElementById("output").innerHTML=`
+SECURITY SUMMARY
+
+Risk Level : LOW
+
+Recommendations
+
+• Update server software
+• Strengthen password policy
+• Review administrator permissions
+
+Assessment complete.
+`;
+
+}
+
+</script>
+
 </body>
 </html>
